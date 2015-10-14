@@ -21,10 +21,14 @@ OPTS = \
 
 # rebar-用于编译
 REBAR := ./bin/rebar
-UNAME := $(shell uname)
+UNAME := $(shell uname -o)
 ifeq ($(UNAME), Linux)
 REBAR := ./bin/rebar.linux
 # do something Linux-y
+endif
+
+ifeq ($(UNAME), Cygwin)
+REBAR := rebar.cmd 
 endif
 
 # 编译全部
