@@ -1,0 +1,2 @@
+-include("proto_record.hrl").
+-include("proto_const.hrl").
